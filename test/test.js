@@ -6,8 +6,10 @@ describe("Factorial Function", function () {
     assert.strictEqual(factorial(0), 1);
   });
   it("Factorial of -1 should throw an error", function () {
-    assert
-      .strictEqual(factorial(-1))
-      .toThrow("Factorial is not defined for negative numbers");
+    assert.throws(
+      () => factorial(-1), 
+      Error, 
+      "Factorial is not defined for negative numbers"
+    );
   });
 });
